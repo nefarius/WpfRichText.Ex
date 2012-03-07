@@ -25,6 +25,9 @@ namespace WpfRichText.Ex.Controls
         public static readonly DependencyProperty ToolbarVisibilityProperty =
             DependencyProperty.Register("ToolbarVisibility", typeof(Visibility), typeof(RichTextEditor),
             new PropertyMetadata(Visibility.Visible));
+        public static readonly DependencyProperty EditorHeightProperty =
+            DependencyProperty.Register("EditorHeight", typeof(string), typeof(RichTextEditor),
+            new PropertyMetadata("Auto"));
 
         public RichTextEditor()
         {
@@ -43,6 +46,15 @@ namespace WpfRichText.Ex.Controls
         public Visibility ToolbarVisibility
         {
             get { return (Visibility)GetValue(ToolbarVisibilityProperty); }
+            set
+            {
+                SetValue(ToolbarVisibilityProperty, value);
+            }
+        }
+
+        public double EditorHeight
+        {
+            get { return (double)GetValue(ToolbarVisibilityProperty); }
             set
             {
                 SetValue(ToolbarVisibilityProperty, value);
