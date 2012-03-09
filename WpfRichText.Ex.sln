@@ -1,7 +1,12 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 10
+# Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRichText.Ex", "WpfRichText.Ex\WpfRichText.Ex.csproj", "{5922EBAC-5CC0-4079-97D7-FCEC9C01AA43}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{C7C036D4-7730-45D1-9632-3AEBE7A3ADC7}"
+	ProjectSection(SolutionItems) = preProject
+		README.TXT = README.TXT
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
