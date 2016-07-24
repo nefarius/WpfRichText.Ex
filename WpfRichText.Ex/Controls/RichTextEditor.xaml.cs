@@ -17,6 +17,9 @@ namespace WpfRichText.Ex.Controls
         public static readonly DependencyProperty EditorHeightProperty =
             DependencyProperty.Register("EditorHeight", typeof(string), typeof(RichTextEditor),
             new PropertyMetadata("Auto"));
+        public static readonly DependencyProperty IsReadOnlyProperty = 
+            DependencyProperty.Register("IsReadOnly", typeof(bool), typeof(RichTextEditor),
+            new PropertyMetadata(false));
 
         public RichTextEditor()
         {
@@ -47,6 +50,15 @@ namespace WpfRichText.Ex.Controls
             set
             {
                 SetValue(ToolbarVisibilityProperty, value);
+            }
+        }
+
+        public bool IsReadOnly
+        {
+            get { return (bool) GetValue(IsReadOnlyProperty); }
+            set
+            {
+                SetValue(IsReadOnlyProperty, value);
             }
         }
     }
