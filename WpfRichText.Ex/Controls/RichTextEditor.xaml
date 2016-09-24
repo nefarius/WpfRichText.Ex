@@ -87,7 +87,8 @@
             <StackPanel >
                 <RichTextBox Name="mainRTB" AcceptsTab="True"  Height="{Binding Path=EditorHeight, ElementName=uxRichTextEditor}"
                              asis:RichTextboxAssistant.BoundDocument="{Binding Path=Text, ElementName=uxRichTextEditor}"
-                             VerticalScrollBarVisibility="Visible" />
+                             VerticalScrollBarVisibility="Visible"
+                             IsReadOnly="{Binding Path=IsReadOnly, ElementName=uxRichTextEditor}"/>
                 <!--<TextBox Text="{Binding Path=Text, ElementName=uxRichTextEditor}" Height="25" />-->
             </StackPanel>
 
