@@ -491,6 +491,9 @@ namespace WpfRichText.Ex.XamlToHtmlParser
                     case "ListItem" :
                         htmlElementName = "LI";
                         break;
+                    case "LineBreak":
+                        htmlElementName = "BR";
+                        break;
                     default :
                         htmlElementName = null; // Ignore the element
                         break;
