@@ -46,10 +46,10 @@ namespace WpfRichText.Ex.Controls
 
         public string EditorHeight
         {
-            get { return (string)GetValue(ToolbarVisibilityProperty); }
+            get { return (string)GetValue(EditorHeightProperty); }
             set
             {
-                SetValue(ToolbarVisibilityProperty, value);
+                SetValue(EditorHeightProperty, value);
             }
         }
 
