@@ -1,8 +1,9 @@
-﻿<UserControl x:Class="WpfRichText.Ex.Controls.RichTextEditor" x:Name="uxRichTextEditor"    
+﻿<UserControl 
+    x:Class="WpfRichText.Ex.Controls.RichTextEditor" 
+    x:Name="uxRichTextEditor"    
     xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-    xmlns:asis="clr-namespace:WpfRichText.Ex.AttachedProperties"
-             >
+    xmlns:asis="clr-namespace:WpfRichText.Ex.AttachedProperties">
 
     <Grid>
 
@@ -81,17 +82,16 @@
                 </Button>
                 <Button Style="{StaticResource formatImageStyle}" Command="EditingCommands.DecreaseIndentation" ToolTip="Decrease Indent">
                     <Image Source="Images\ParagraphDecreaseIndentation.png"></Image>
-                </Button>               
+                </Button>
             </ToolBar>
-            
-            <StackPanel >
-                <RichTextBox Name="mainRTB" AcceptsTab="True"  Height="{Binding Path=EditorHeight, ElementName=uxRichTextEditor}"
+
+            <RichTextBox Name="mainRTB"
+                             AcceptsReturn="True"
+                             Height="{Binding Path=EditorHeight, ElementName=uxRichTextEditor}"
                              asis:RichTextboxAssistant.BoundDocument="{Binding Path=Text, ElementName=uxRichTextEditor}"
                              VerticalScrollBarVisibility="Visible"
-                             IsReadOnly="{Binding Path=IsReadOnly, ElementName=uxRichTextEditor}"/>
+                             IsReadOnly="{Binding Path=IsReadOnly, ElementName=uxRichTextEditor}" />
                 <!--<TextBox Text="{Binding Path=Text, ElementName=uxRichTextEditor}" Height="25" />-->
-            </StackPanel>
-
         </DockPanel>
     </Grid>
 </UserControl>
